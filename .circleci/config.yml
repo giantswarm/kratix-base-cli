@@ -7,6 +7,8 @@ workflows:
   my-workflow:
     jobs:
       - architect/push-to-registries:
+          registries-data: |-
+            public gsoci.azurecr.io ACR_GSOCI_USERNAME ACR_GSOCI_PASSWORD true
           context: architect
           name: push-to-registries
           filters:
